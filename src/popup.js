@@ -9,6 +9,10 @@
     status.dataset.type = type || "info";
   }
 
+  function getPasteShortcut() {
+    return /Mac|iPhone|iPad|iPod/i.test(navigator.platform) ? "⌘V" : "Ctrl+V";
+  }
+
   function cleanCurrentText() {
     var cleaned = cleaner.cleanMarkdown(sourceText.value);
     sourceText.value = cleaned;
@@ -63,7 +67,7 @@
 
     try {
       await navigator.clipboard.writeText(cleaner.addParagraphSpacing(cleaned, 1));
-      setStatus("已复制。请到公众号文字区按 ⌘V 粘贴。", "ok");
+      setStatus("已复制。请到公众号文字区按 " + getPasteShortcut() + " 粘贴。", "ok");
     } catch (error) {
       setStatus("复制失败，请手动复制。", "warn");
     }

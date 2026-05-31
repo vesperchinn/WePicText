@@ -7,6 +7,10 @@
     cleanedText: ""
   };
 
+  function getPasteShortcut() {
+    return /Mac|iPhone|iPad|iPod/i.test(navigator.platform) ? "⌘V" : "Ctrl+V";
+  }
+
   function isVisible(element) {
     var rect = element.getBoundingClientRect();
     var style = window.getComputedStyle(element);
@@ -113,7 +117,7 @@
       '  <button type="button" id="wepictext-clean">整理剪贴板</button>',
       '  <button type="button" id="wepictext-write">复制并定位</button>',
       "</div>",
-      '<p id="wepictext-status">拖入文件，复制后在文字区按 ⌘V。</p>'
+      '<p id="wepictext-status">拖入文件，复制后在文字区按 ' + getPasteShortcut() + '。</p>'
     ].join("");
 
     document.documentElement.appendChild(panel);
@@ -168,7 +172,12 @@
 
       try {
         var hasTarget = await copyAndFocusTarget(text);
-        setStatus(hasTarget ? "已复制。空行已加防吞占位，请按 ⌘V 粘贴。" : "已复制。请点文字区后按 ⌘V 粘贴。", "ok");
+        setStatus(
+          hasTarget
+            ? "已复制。空行已加防吞占位，请按 " + getPasteShortcut() + " 粘贴。"
+            : "已复制。请点文字区后按 " + getPasteShortcut() + " 粘贴。",
+          "ok"
+        );
       } catch (error) {
         setStatus("复制失败，请手动复制右侧文字。", "warn");
       }
