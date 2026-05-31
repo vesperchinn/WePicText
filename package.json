@@ -1,0 +1,9 @@
+{
+  "name": "wepictext",
+  "version": "0.1.7",
+  "private": true,
+  "description": "公众号贴图文字整理浏览器插件",
+  "scripts": {
+    "test": "node tests/cleaner.test.js"
+  }
+}

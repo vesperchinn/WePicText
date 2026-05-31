@@ -1,0 +1,133 @@
+#wepictext-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+  width: 320px;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d7dce2;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #17202a;
+  box-shadow: 0 12px 36px rgba(20, 31, 46, 0.18);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+
+#wepictext-panel * {
+  box-sizing: border-box;
+}
+
+.wepictext-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.wepictext-head strong {
+  font-size: 15px;
+}
+
+.wepictext-head span {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#wepictext-collapse {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #d7dce2;
+  border-radius: 6px;
+  background: #f7f8fa;
+  color: #344054;
+  cursor: pointer;
+}
+
+.wepictext-drop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  border: 1px dashed #9aa6b2;
+  border-radius: 8px;
+  background: #f7f8fa;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+.wepictext-drop[data-dragging="true"] {
+  border-color: #0f766e;
+  background: #edfdfa;
+  color: #0f766e;
+}
+
+#wepictext-file {
+  display: none;
+}
+
+#wepictext-preview {
+  display: block;
+  width: 100%;
+  height: 180px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #d7dce2;
+  border-radius: 8px;
+  resize: vertical;
+  color: #17202a;
+  background: #ffffff;
+  font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.wepictext-actions {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.wepictext-actions button {
+  height: 34px;
+  border: 1px solid #d7dce2;
+  border-radius: 7px;
+  background: #17202a;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.wepictext-actions button:first-child {
+  background: #ffffff;
+  color: #17202a;
+}
+
+#wepictext-status {
+  min-height: 20px;
+  margin: 8px 0 0;
+  color: #56616f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#wepictext-status[data-type="ok"] {
+  color: #047857;
+}
+
+#wepictext-status[data-type="warn"] {
+  color: #b45309;
+}
+
+#wepictext-panel[data-collapsed="true"] {
+  width: auto;
+}
+
+#wepictext-panel[data-collapsed="true"] .wepictext-drop,
+#wepictext-panel[data-collapsed="true"] #wepictext-file,
+#wepictext-panel[data-collapsed="true"] #wepictext-preview,
+#wepictext-panel[data-collapsed="true"] .wepictext-actions,
+#wepictext-panel[data-collapsed="true"] #wepictext-status {
+  display: none;
+}

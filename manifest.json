@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "WePicText",
+  "version": "0.1.7",
+  "description": "公众号贴图文字整理工具：清理 Markdown，只保留段落空行。",
+  "icons": {
+    "128": "assets/icon-128.png"
+  },
+  "permissions": ["clipboardWrite"],
+  "host_permissions": ["https://mp.weixin.qq.com/*"],
+  "action": {
+    "default_title": "WePicText",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mp.weixin.qq.com/*"],
+      "js": ["src/cleaner.js", "src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

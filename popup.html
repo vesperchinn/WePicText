@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WePicText</title>
+    <link rel="stylesheet" href="src/popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header>
+        <h1>WePicText</h1>
+        <p>清理 Markdown，只保留段落空行。</p>
+      </header>
+
+      <label class="drop-zone" for="fileInput">
+        <span>拖入 .md / .txt</span>
+        <input id="fileInput" type="file" accept=".md,.markdown,.txt,text/markdown,text/plain" />
+      </label>
+
+      <textarea id="sourceText" placeholder="或直接粘贴正文"></textarea>
+
+      <div class="actions">
+        <button id="cleanButton" type="button">整理</button>
+        <button id="writeButton" type="button">复制后粘贴</button>
+        <button id="copyButton" type="button">复制</button>
+      </div>
+
+      <p id="status" role="status"></p>
+    </main>
+
+    <script src="src/cleaner.js"></script>
+    <script src="src/popup.js"></script>
+  </body>
+</html>
