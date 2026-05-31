@@ -4,6 +4,12 @@ WePicText 是一个微信公众号贴图文字整理浏览器插件。
 
 公众号贴图内容的图片是左右滑动合集，文字单独放在图片下方。这个文字区不能调字号，也不能加粗，所以 WePicText 只解决一个问题：把 `.txt` 或 `.md` 草稿整理成适合粘贴到贴图文字区的干净正文。
 
+## 功能展示
+
+![WePicText 拖入文档并整理正文](docs/images/wepictext-demo-01.png)
+
+![WePicText 复制后粘贴到公众号贴图文字区](docs/images/wepictext-demo-02.png)
+
 ## 功能
 
 - 拖入 `.txt` 文件
