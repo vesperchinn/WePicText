@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "WePicText",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "公众号贴图文字整理工具：清理 Markdown，只保留段落空行。",
   "icons": {
     "128": "assets/icon-128.png"

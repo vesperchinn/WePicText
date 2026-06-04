@@ -1,6 +1,6 @@
 {
   "name": "wepictext",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "description": "公众号贴图文字整理浏览器插件",
   "scripts": {

@@ -51,7 +51,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 56px;
+  height: 180px;
   border: 1px dashed #9aa6b2;
   border-radius: 8px;
   background: #f7f8fa;
@@ -72,7 +72,7 @@
 #wepictext-preview {
   display: block;
   width: 100%;
-  height: 180px;
+  height: 56px;
   margin-top: 10px;
   padding: 10px;
   border: 1px solid #d7dce2;

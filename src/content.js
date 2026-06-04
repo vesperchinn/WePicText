@@ -107,7 +107,7 @@
     panel.id = "wepictext-panel";
     panel.innerHTML = [
       '<div class="wepictext-head">',
-      "  <strong>WePicText <span>0.1.7</span></strong>",
+      "  <strong>WePicText <span>0.1.8</span></strong>",
       '  <button type="button" id="wepictext-collapse" aria-label="收起">−</button>',
       "</div>",
       '<label class="wepictext-drop" for="wepictext-file">拖入 .md / .txt</label>',
